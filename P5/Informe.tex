@@ -1,0 +1,123 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{amsmath}
+
+%%search -> (?:url=\{)(.*)(:?\})
+%%replace -> howpublished={\\url{$1}}
+\geometry{a4paper, margin=7em}
+
+
+\lstset{
+    frame=single,
+    breaklines=true,
+    numbers=left,
+    keywordstyle=\color{blue},
+    numbersep=15pt,
+    numberstyle=,
+    basicstyle=\linespread{1.5}\selectfont\ttfamily,
+    commentstyle=\color{gray},
+    stringstyle=\color{orange},
+    identifierstyle=\color{green!40!black},
+}
+
+\setlength{\parindent}{4em}
+%%\setlength{\parindent}{0em}
+\setlength{\parskip}{0.8em}
+    
+%%\renewcommand{\familydefault}{phv} %%Seleccionamos Helvetica
+    
+\lstdefinestyle{console}
+{
+    numbers=left,
+    backgroundcolor=\color{violet},
+    %%belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    %%xleftmargin=\parindent,
+    %%showstringspaces=false,
+    basicstyle=\footnotesize\ttfamily,
+    %%keywordstyle=\bfseries\color{green!40!black},
+    %%commentstyle=\itshape\color{green},
+    %%identifierstyle=\color{blue},
+    %%stringstyle=\color{orange},
+    basicstyle=\scriptsize\color{white}\ttfamily,
+}
+    
+\title{Interactiva 2}
+\author{Aldán Creo Mariño}
+    
+    
+\pagestyle{fancy}
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyhead[L]{\runauthor}
+\fancyhead[C]{OXE}
+\fancyhead[R]{Interactiva 5}
+
+\bibliographystyle{plain}
+    
+\begin{document}
+\maketitle
+
+\section{Escolle un sector dentro do CNAE, consulta previamente a clasificación CNAE e anota o seu código.}
+
+He elegido el código 6201 (``Actividades de programación informática'').
+
+\section{Calcula os rateos do cadro para o último ano dispoñible das dúas empresas.}
+
+\begin{center}
+    \begin{tabular}{ | p{5cm} | p{2cm} | p{2cm} | p{5cm} | }
+        \hline
+      & Bouge SA & Ingeciber SA & Fórmula rateo \\ \hline
+      Fondo de rotación & 154606 & 78920 & $\text{Activo corrente} - \text{Pasivo corrente}$ \\ \hline
+      Razón ou rateo de solvencia & 2.01 & 1.21 & $\frac{\text{Activo corrente}}{\text{Pasivo corrente}}$ \\ \hline
+      Razón ou rateo de liquidez a curto prazo & 2.01 & 1.21 & $\frac{\text{Activo corrente} - \text{Existencias}}{\text{Pasivo corrente}}$ \\ \hline
+      Razón ou rateo de tesourería & 1.5 & 0.4 & $\frac{\text{Tesourería} + \text{Inv. financeiros a c.p.}}{\text{Pasivo corrente}}$ \\ \hline
+      Rendibilidade financeira & 0.55 & 0.15 & $\frac{\text{Resultado do exercicio}}{\text{Patrimonio neto}}$ \\ \hline
+      Rendibilidade económica & 0.31 & 0.01 & $\frac{\text{Resultado antes de xuros e impostos}}{\text{Activo total neto}}$ \\ \hline
+      Rotación de activos totais & 0.31 & 0.004 & $\frac{\text{Ingresos de explotación}}{\text{Activo total}}$ \\ \hline
+      Rotación de activo corrente & 0.37 & 0.017 & $\frac{\text{Ingresos de explotación}}{\text{Activo corrente}}$ \\ \hline
+    \end{tabular}
+\end{center}
+
+\section{Analiza a información extraída dos rateos anteriores e elabora unha conclusión para ambas empresas da súa situación individual e comparativamente.}
+
+En el caso de Bouge SA, el fondo de rotación es notablemente mayor. Esto, en términos absolutos, nos indica que una cantidad mayor de activos en Bouge SA están financiados con recursos permanentes, es decir, el pasivo no corriente (como préstamos a largo plazo) y el patrimonio neto. Pese a todo, esta medida de por sí no nos aporta mucha información, ya que depende del volumen de la empresa.
+
+Un ratio mucho más informativo es el ratio de solvencia. En este caso, nos habla sobre la capacidad de una empresa de hacer frente a sus deudas, ya que mide la fracción que representa el fondo de rotación frente a los activos corrientes (tesorería, por ejemplo). Es decir, si la empresa tuviese que pagar todas sus deudas a corto plazo (pasivos a corto plazo) en ése momento, ¿podría hacerlo? ¿Y en qué medida?
+
+\begin{itemize}
+    \item Si el ratio de solvencia es mayor que 1, nos indica que el activo corriente es mayor que el pasivo corriente. Es decir, podría usar sus activos corrientes para pagar las deudas (al menos en teoría, ya que no todos son igual de líquidos). Si, por ejemplo, el ratio de solvencia es 2, éso quiere decir que la empresa podría pagar sus deudas y conservar la mitad de los activos corrientes que tenía.
+    \item Si el ratio de solvencia fuese menor que 1, lo que significaría sería lo contrario: que la empresa no dispone del activo corriente necesario para pagar sus deudas a corto plazo en el momento. La única opción que tendría sería tratar de liquidar sus activos no corrientes, para poder pagar las deudas, pero este ratio no entra a evaluar eso (no tiene en cuenta los activos totales, que incluyen los activos no corrientes). La idea del ratio de solvencia, como comentaba, es hablar sobre la capacidad que tendría de pagar con sus activos corrientes (que por lo general son más o menos líquidos).
+\end{itemize}
+
+En el caso de las dos empresas, se puede observar que tienen un ratio de solvencia mayor que 1, pero en el caso de Bouge SA es mucho mejor que en el de Ingeciber SA. Como explicaba, esto nos indica que si Ingeciber y Bouge tuvieran que pagar sus deudas al cierre de las cuentas anuales, Bouge podría hacerlo conservando la mitad de sus activos corrientes, y así seguir adelante con un margen razonable, mientras que Ingeciber podría verse en problemas con mucha más facilidad, ya que pese a poder afrontar el pago, se quedaría casi sin activos corrientes, lo cual le causaría dificultades para afrontar nuevas deudas, o invertir para expandirse, por ejemplo. Una solución que podría tomar sería abrir una ronda de financiación, pero no es una solución segura.
+
+En lo que se refiere al ratio de liquidez a corto plazo, es el mismo que el ratio de solvencia en el caso de las dos empresas, ya que no disponen de existencias. Esto es así porque se dedican a desarrollar programas informáticos, así que este ratio no es muy relevante en este caso. En un caso de otro tipo de empresa, sería un indicador más fiable de la capacidad de pago de sus deudas, ya que al restarle las existencias al activo corriente, nos quedamos con la parte más líquida del activo. Si yo soy una empresa, nadie me garantiza que consiga vender mis existencias, así que el ratio de solvencia no es una medida totalmente fiable de que pueda hacer frente a mis deudas.
+
+Por ejemplo, podría ser el caso de una empresa que se cree ahora, aprovechando la situación del COVID, para fabricar mascarillas. Supongamos que compra fábricas con préstamos a corto plazo, para conseguir fondos rápidamente, y el proceso de contratación de personal, firma de contratos con proveedores y distribuidores, etc. le lleva unos meses. Si justo en julio el Gobierno dice que ya no hace falta llevar mascarillas, la demanda bajaría muchísimo, pese a que la empresa estaba lista para vender, imaginemos, un millón de mascarillas a un euro cada una. De repente, se vería con un montón de deudas que tiene que pagar a corto plazo, y nadie quiere comprar sus existencias. Aquí el ratio de solvencia podría ser muy positivo (imaginando que su pasivo corriente fuera considerablemente menor que el activo corriente). Podríamos pensar, entonces, que la empresa no tiene ningún tipo de problema, pero en realidad estaría al borde de la quiebra, en la medida en que no va a conseguir vender las mascarillas y pagar sus deudas. Aquí, el ratio que sería más revelador, sería el de liquidez a corto plazo, porque sería nuestra forma de poder ver que la grandísima parte de su activo corriente son las existencias que no va a poder vender, y fijándonos en ese ratio es como nos podríamos dar cuenta de que la empresa tiene un serio problema.
+
+Un ratio más restrictivo aún es el de tesorería. En este caso, habla ``del dinero que tiene la empresa en sus manos''. Es decir, dentro Del grupo que conforman los activos corrientes, solamente tiene en cuenta Los más líquidos: es decir, las inversiones financieras a corto plazo que se pueden vender sin problemas, en general, y lo que se dispone en tesorería (bancos, caja...). Es el dinero del que dispone la empresa de forma casi segura. Por tanto, este ratio es incluso más fiable para evaluar la capacidad de pago de una empresa frente a sus deudas.
+
+En el caso de nuestras dos empresas, podemos ver que Bouge SA tiene un ratio de 1.5, ya que en este caso no tenemos en cuenta sus derechos de cobro, que representarían ese 0.5 de diferencia. Los derechos de cobro son menos líquidos que tesorería y las inversiones financieras a corto plazo, ya que nuestros deudores podrían no pagarnos (por ejemplo, que nuestros clientes se declarasen en bancarrota). Como es lógico, por ese motivo se excluye del ratio de tesorería. En el caso de Ingeciber SA, este ratio es ciertamente preocupante, ya que es del 0.4. Esto implica que no sería capaz de hacer frente a sus deudas con el dinero del que dispone directamente. La gran diferencia entre el ratio de liquidez a corto plazo y el ratio de tesorería se debe a que a Ingeciber SA le deben 307471 euros, que entrarían en el primero, pero se excluyen del segundo. Es decir, necesitaría conseguir ejecutar sus derechos de cobro para poder pagar sus deudas, y esto es menos seguro que disponer del dinero a través de sus cuentas bancarias, por ejemplo. Una opción si no se viese capaz de pagar sus deudas sería intentar renegociarlas.
+
+Las empresas con poca rotación deberían 
+
+Las que tengan una baja rentabilidad deberían intentar renegociar sus deudas.
+
+\end{document}
